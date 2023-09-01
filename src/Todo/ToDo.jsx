@@ -12,7 +12,6 @@ export default function ToDo() {
             atividade: atividade, id: id
         }]);
         setId(id + 1)
-        alert("Salvou!!!")
         console.log(lista)
 
     };
