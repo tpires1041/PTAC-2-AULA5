@@ -15,6 +15,16 @@ export default function ToDo() {
         console.log(lista)
 
     };
+
+    const remover = (id) => {
+        const auxLista = [];
+        lista.map((Lista) => {
+            if (Lista.id !== id) {
+                auxLista.push(Lista);
+            }
+        });
+        setLista(auxLista);
+    }
    
     return (
         <div>
@@ -26,9 +36,13 @@ export default function ToDo() {
                 <button>Adicionar</button>
             </form>
             {lista.map((ativ)=>
-                <div key={ativ.id}>
-                    <p>{ativ.atividade}</p>
-                </div>
+                <ul key={ativ.id}>
+                    <li>
+                        <p>{ativ.atividade}</p>
+                        <button onClick={() => remover(ativ.id)}>Remover</button>
+                    </li>
+                    
+                </ul>
 
             )}
            
