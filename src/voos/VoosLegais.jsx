@@ -1,10 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-export default function ToDo() {
-    const [atividade, setAtividade] = useState("");
-    const [lista, setLista] = useState([]);
-    const [id, setId] = useState(1);
+export default function Voos() {
+    const [voos, setVoos] = useState([])
 
     const salvar = (e) => {
         e.preventDefault();
